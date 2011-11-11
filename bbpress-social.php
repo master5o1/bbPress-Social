@@ -132,7 +132,7 @@ class bbp_social {
 		echo '<meta property="og:image"          content="' . home_url('/favicon.png') . '" />' . "\n";
 	}
 
-	function buttons($html = '') {
+	function buttons() {
 		$social = array();
 		if ( bbp_social::get_tumblr() ) {
 			$social['tumblr'] = '<span style="margin: 0 0.45em 0 0; padding: 0 0 0 0; height: 2.0em; vertical-align: middle; display: inline-block;"><a href="http://www.tumblr.com/share" title="Share on Tumblr" style="text-decoration: none; display:inline-block; text-indent:-9999px; overflow:hidden; width:81px; height:20px; background:url(\'http://platform.tumblr.com/v1/share_1.png\') top left no-repeat transparent;">&nbsp;</a></span>';
@@ -147,7 +147,7 @@ class bbp_social {
 			$social['facebook'] = '<span style="margin: 0 -1.0em 0.20em 0; padding: 0 0 0 0; height: 2.0em; vertical-align: middle; display: inline-block;"><div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#appId=' . bbp_social::get_fb_app_id() . '&amp;xfbml=1"></script><fb:like href="" send="false" layout="button_count" width="" show_faces="false" font=""></fb:like></span>';
 		}
 		if ( empty($social) ) return;
-		$out = $html;
+		$out = '';
 		foreach ($social as $s) {
 			$out .= '' . $s . '';
 		}

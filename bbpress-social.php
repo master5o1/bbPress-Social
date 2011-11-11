@@ -130,7 +130,7 @@ class bbp_social {
 		echo '<meta property="og:image"          content="' . home_url('/favicon.png') . '" />' . "\n";
 	}
 
-	function buttons($html = '') {
+	function buttons() {
 		$social = array();
 		if ( bbp_social::get_tumblr() ) {
 			$social['tumblr'] = '<span style="margin: 0 0.45em 0 0; padding: 0 0 0 0; height: 2.0em; vertical-align: middle; display: inline-block;"><a href="http://www.tumblr.com/share" title="Share on Tumblr" style="text-decoration: none; display:inline-block; text-indent:-9999px; overflow:hidden; width:81px; height:20px; background:url(\'http://platform.tumblr.com/v1/share_1.png\') top left no-repeat transparent;">&nbsp;</a></span>';

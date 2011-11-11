@@ -145,7 +145,7 @@ class bbp_social {
 			$social['facebook'] = '<span style="margin: 0 -1.0em 0.20em 0; padding: 0 0 0 0; height: 2.0em; vertical-align: middle; display: inline-block;"><div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#appId=' . bbp_social::get_fb_app_id() . '&amp;xfbml=1"></script><fb:like href="" send="false" layout="button_count" width="" show_faces="false" font=""></fb:like></span>';
 		}
 		if ( empty($social) ) return;
-		$out = $html;
+		$out = '';
 		foreach ($social as $s) {
 			$out .= '' . $s . '';
 		}

@@ -123,7 +123,9 @@ class bbp_social {
 		
 		echo "\n";
 		echo '<meta property="fb:app_id"         content="' . bbp_social::get_fb_app_id() . '" />' . "\n";
-		echo '<meta property="og:type"           content="website" />' . "\n";
+		echo '<meta property="og:type"           content="tartarusnz:forum_topic" />' . "\n";
+		$user = get_userdata(bbp_get_topic_author_id());
+		echo '<meta property="tartarusnz:author" content="' . $user->user_nicename . '" />' . "\n";
 		echo '<meta property="og:url"            content="' . bbp_get_topic_permalink() . '" />' . "\n";
 		echo '<meta property="og:title"          content="' . bbp_get_topic_title() . '" />' . "\n";
 		echo '<meta property="og:description"    content="' . esc_attr( strip_tags( trim(bbp_get_topic_content()) ) ) . '" />' . "\n";
